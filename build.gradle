@@ -4,15 +4,11 @@ buildscript {
 		mavenLocal()
 		jcenter()
 	}
-
-	dependencies {
-		classpath "org.gradle.api.plugins:gradle-tomcat-plugin:1.0"
-	}
 }
 
 apply plugin: 'java'
 apply plugin: 'idea'
-apply plugin: 'tomcat'
+apply plugin: 'jetty'
 apply plugin: 'war'
 
 war {
@@ -52,15 +48,9 @@ dependencies {
 	compile ("org.slf4j:slf4j-log4j12:1.7.5")
 	compile ("log4j:log4j:1.2.16")
 
-	tomcat ("org.apache.tomcat.embed:tomcat-embed-core:7.0.50",
-			"org.apache.tomcat.embed:tomcat-embed-logging-juli:7.0.50")
-	tomcat ("org.apache.tomcat.embed:tomcat-embed-jasper:7.0.50") {
-		exclude group: "org.eclipse.jdt.core.compiler", module: "ecj"
-	}
-
 	testCompile("junit:junit:4.11")
 }
 
 task wrapper(type: Wrapper) {
-	gradleVersion = '1.8'
+	gradleVersion = "1.8"
 }
