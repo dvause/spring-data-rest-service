@@ -17,7 +17,7 @@ import java.util.concurrent.atomic.AtomicLong;
 
 @RestController
 public class GreetingController {
-	private static final String name_tpl = "Hello, %s! ";
+	private static final String name_tpl = "Hello, %s!";
 	private final AtomicLong counter = new AtomicLong();
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
