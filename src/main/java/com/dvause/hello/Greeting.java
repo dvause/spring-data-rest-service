@@ -1,7 +1,5 @@
 package com.dvause.hello;
 
-import java.util.Date;
-
 /**
  * @author David Vause
  */
