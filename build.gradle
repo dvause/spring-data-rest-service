@@ -28,7 +28,7 @@ dependencies {
 		exclude(group: "commons-logging", module: "commons-logging")
 	}
 	compile ("org.springframework:spring-webmvc:4.0.1.RELEASE")
-	compile ("org.springframework:spring-test:4.0.1.RELEASE")
+
 	compile ("org.springframework:spring-jdbc:4.0.1.RELEASE")
 	compile ("org.springframework:spring-tx:4.0.1.RELEASE")
 
@@ -51,7 +51,8 @@ dependencies {
 
 	providedCompile "javax.servlet:servlet-api:2.5"
 
-	testCompile("junit:junit:4.11")
+	testCompile ("org.springframework:spring-test:4.0.1.RELEASE")
+	testCompile ("junit:junit:4.11")
 }
 
 task wrapper(type: Wrapper) {
