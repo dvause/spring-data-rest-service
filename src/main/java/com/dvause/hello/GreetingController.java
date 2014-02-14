@@ -3,6 +3,7 @@ package com.dvause.hello;
 import org.joda.time.LocalDateTime;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
+import org.springframework.http.HttpHeaders;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -24,6 +25,7 @@ public class GreetingController {
 		LocalDateTime dateTime = LocalDateTime.now();
 		DateTimeFormatter fmt = DateTimeFormat.forPattern("EEEE, dd MMMM, yyyy HH:mm:ss");
 		String datestr = dateTime.toString(fmt);
+
 		return new Greeting(counter.incrementAndGet(), String.format(name_tpl, name), datestr);
 	}
 }
