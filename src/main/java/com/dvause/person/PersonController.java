@@ -16,7 +16,7 @@ public class PersonController {
 
 	@RequestMapping(value = "/persons", method = RequestMethod.GET)
 	public Person getPerson() {
-		/*Test code t*/
+		/*Test code insert*/
 		Person person = new Person("Dave", 42);
 		repository.insertPerson(person);
 
