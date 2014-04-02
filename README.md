@@ -1,4 +1,4 @@
 spring-data-rest-service
 ========================
 
-A spring rest service built with spring-boot for connecting to various databases.
+A spring rest service for connecting to various databases.
